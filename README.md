@@ -44,7 +44,7 @@ var claims = {
 var jwt = nJwt.create(claims,signingKey)
 ````
 
-Once you have creted the JWT, you can look at it's internal structure by
+Once you have created the JWT, you can look at it's internal structure by
 logging it to the console.  This is our internal representation of the token,
 this is not what you'll send to your end user:
 ````javascript
@@ -71,7 +71,7 @@ unique for every token.  You can use this if you want to create a database of
 tokens that have been issued to the user.
 
 When you are ready to give the token to your end user, you need to compact it.
-This will turn it into a Base64 URL encoded string, so it'l be safe to pass
+This will turn it into a Base64 URL encoded string, so it'll be safe to pass
 around in browsers without getting any strange formatting applied to it.
 ````javascript
 var token = jwt.compact();
@@ -190,3 +190,19 @@ The following features are not yet supported by this library:
 
 * Encrypting the JWT (aka JWE)
 * Signing key resolver (using the `kid` field)
+
+
+## Learn More
+
+- [Create and Verify JWTs With Node.js](https://stormpath.com/blog/nodejs-jwt-create-verify/)
+- [Token Based Authentication for Single Page Apps (SPAs)](https://stormpath.com/blog/token-auth-spa/)
+- [Where to Store Your JWTs - Cookies vs HTML5 Web Storage](https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage/)
+- [Use JWT the Right Way!](https://stormpath.com/blog/jwt-the-right-way/)
+
+## Author
+
+Maintained by [Stormpath](https://stormpath.com/)
+
+## Licensing
+
+This project is open-source via the [Apache 2.0 License](LICENSE).
